@@ -1,0 +1,19 @@
+* {
+  box-sizing: border-box;
+  font-synthesis: style;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+body {
+  margin: 0;
+  background-color: #333333;
+  overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+}

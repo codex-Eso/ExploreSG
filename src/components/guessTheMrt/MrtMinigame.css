@@ -1,0 +1,163 @@
+.textColor {
+    color: #1B3A57;
+}
+
+#minigameScreen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: clamp(280px, 80vw, 500px);
+    height: clamp(250px, 60vh, 400px);
+    max-width: 80vw;
+    padding: clamp(20px, 5vw, 40px);
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    overflow-y: auto;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(10px);
+    border: 8px solid transparent;
+    box-shadow: 0 30px 30px 0 rgba(255, 255, 255, 0.25);
+    transition: all 0.4s ease;
+}
+
+#minigameScreen::-webkit-scrollbar {
+    display: none;
+}
+
+#minigameWrapper {
+    width: 100%;
+    height: 100%;
+}
+
+#minigameContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+#actionBtns {
+    margin-bottom: 0px;
+}
+
+#mrtInput {
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    background: #f5f5f5;
+    border: 2px solid grey;
+    outline: none;
+    transition: border-width 0.1s ease-in-out, border-color 0.1s ease-in-out;
+    color: #1B3A57;
+    font-size: large;
+}
+
+#mrtInput:focus {
+    border: 3.5px solid rgba(27, 58, 87, 0.85);
+}
+
+#guessMsg {
+    display: none;
+    transition: opacity 3s ease;
+    opacity: 0;
+    font-weight: bold;
+}
+
+#guessMsg.show {
+    opacity: 1;
+}
+
+#giveUpText {
+    font-style: italic;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+#giveUpText:hover {
+    color: blue;
+}
+
+#mrtStation {
+    text-decoration: underline;
+}
+
+#allHintsWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+}
+
+.hintWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    background: #f5f5f5;
+    border: #1B3A57 3px solid;
+    padding: 12px;
+    border-radius: 30px;
+}
+
+.hintToggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: none;
+    border: none;
+    font-weight: bold;
+    font-size: large;
+    cursor: pointer;
+}
+
+.hintToggle span:first-child {
+    width: 100%;
+    text-align: left;
+}
+
+.hintContent {
+    font-size: medium;
+}
+
+#headingDisplay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+#mrtCompletionDisplay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+#mrtCompletionDisplay #headerText {
+    font-weight: bold;
+    font-size: clamp(24px, 6vw, 30px);
+}
+
+#completionText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+button:disabled {
+    cursor: default;
+}
+
+@media (min-width: 768px) {
+
+    #mrtInput,
+    #allHintsWrapper {
+        width: 80%;
+    }
+}
