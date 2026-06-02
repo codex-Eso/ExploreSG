@@ -1,4 +1,5 @@
 import './App.css'
+import { Analytics } from '@vercel/analytics/react';
 import Destination from './pages/destinations/DestinationRandomizer.tsx'
 
 function App() {
@@ -6,6 +7,7 @@ function App() {
     <>
       <div>
         <Destination />
+        <Analytics />
       </div>
     </>
   )
