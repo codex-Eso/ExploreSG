@@ -23,10 +23,15 @@
 
 .header {
     position: relative;
-    color: #d9d9d9;
     z-index: 1;
     transition: all 1s ease;
+    color: #d9d9d9;
     -webkit-text-fill-color: #d9d9d9;
+}
+
+.header h2 {
+    color: white;
+    -webkit-text-fill-color: white;
 }
 
 .randomizerWrapper {
